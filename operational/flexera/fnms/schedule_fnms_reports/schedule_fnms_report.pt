@@ -222,9 +222,11 @@ end
 # Escalations
 ###############################################################################
 
-escalation "esc_send_report" do
+escalation "esc_email" do
   automatic true
   label "Send Email"
   description "Send incident email"
   email $param_email
+  attach_export_table true
+end
 end
